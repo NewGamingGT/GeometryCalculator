@@ -41,6 +41,9 @@ namespace FormularCalculator
 
             breadthLbl.Visible = false;
             breadthTbx.Visible = false;
+
+            LengthLbl.Left = (formWidth / 2) - 115;
+            lengthTbx.Left = LengthLbl.Left + 110;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -155,6 +158,9 @@ namespace FormularCalculator
         {
             Visibility(false, false, false, false);
 
+            LengthLbl.Left = (formWidth / 2) - 115;
+            lengthTbx.Left = LengthLbl.Left + 110;
+
             mode = 0;
 
             breadthLbl.Text = "Breadth:";
@@ -172,6 +178,12 @@ namespace FormularCalculator
         private void rectBtn_Click(object sender, EventArgs e)
         {
             Visibility(true, true, false, false);
+
+            LengthLbl.Left = (formWidth / 2) - 220;
+            lengthTbx.Left = LengthLbl.Left + 110;
+
+            breadthLbl.Left = (formWidth / 2) - 15;
+            breadthTbx.Left = breadthLbl.Left + 120;
 
             breadthLbl.Text = "Breadth:";
             LengthLbl.Text = "Length:";
@@ -191,6 +203,12 @@ namespace FormularCalculator
         {
             Visibility(true, true, false, false);
 
+            LengthLbl.Left = (formWidth / 2) - 210;
+            lengthTbx.Left = LengthLbl.Left + 110;
+
+            breadthLbl.Left = (formWidth / 2) ;
+            breadthTbx.Left = breadthLbl.Left + 120;
+
             breadthLbl.Text = "Height:";
             LengthLbl.Text = "Length:";
 
@@ -206,6 +224,15 @@ namespace FormularCalculator
         private void trapBtn_Click(object sender, EventArgs e)
         {
             Visibility(true, true, true, true);
+
+            LengthLbl.Left = (formWidth / 2) - 330;
+            lengthTbx.Left = LengthLbl.Left + 110;
+
+            breadthLbl.Left = (formWidth / 2) + 60 ;
+            breadthTbx.Left = breadthLbl.Left + 120;
+
+            baseLbl.Left = (formWidth / 2) - 140;
+            baseTbx.Left = baseLbl.Left + 120;
 
             breadthLbl.Text = "Height:";
             LengthLbl.Text = "Base 1:";
@@ -223,6 +250,9 @@ namespace FormularCalculator
         private void circleBtn_Click(object sender, EventArgs e)
         {
             Visibility(false, false, false, false);
+
+            LengthLbl.Left = (formWidth / 2) - 115;
+            lengthTbx.Left = LengthLbl.Left + 110;
 
             LengthLbl.Text = "Radius:";
 

@@ -49,7 +49,7 @@
             this.LengthLbl.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.LengthLbl.Font = new System.Drawing.Font("Arial", 20F);
             this.LengthLbl.ForeColor = System.Drawing.Color.White;
-            this.LengthLbl.Location = new System.Drawing.Point(37, 399);
+            this.LengthLbl.Location = new System.Drawing.Point(42, 400);
             this.LengthLbl.Name = "LengthLbl";
             this.LengthLbl.Size = new System.Drawing.Size(113, 38);
             this.LengthLbl.TabIndex = 0;
@@ -58,11 +58,12 @@
             // 
             // lengthTbx
             // 
+            this.lengthTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.lengthTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lengthTbx.ForeColor = System.Drawing.Color.White;
             this.lengthTbx.Location = new System.Drawing.Point(156, 399);
             this.lengthTbx.Name = "lengthTbx";
-            this.lengthTbx.Size = new System.Drawing.Size(93, 38);
+            this.lengthTbx.Size = new System.Drawing.Size(80, 38);
             this.lengthTbx.TabIndex = 1;
             this.lengthTbx.Text = "1";
             this.lengthTbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lengthTbx_KeyPress);
@@ -151,7 +152,7 @@
             this.answerLbl.BackColor = System.Drawing.Color.Transparent;
             this.answerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.answerLbl.ForeColor = System.Drawing.Color.Black;
-            this.answerLbl.Location = new System.Drawing.Point(17, 196);
+            this.answerLbl.Location = new System.Drawing.Point(17, 201);
             this.answerLbl.Name = "answerLbl";
             this.answerLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.answerLbl.Size = new System.Drawing.Size(775, 40);
@@ -161,6 +162,7 @@
             // 
             // breadthTbx
             // 
+            this.breadthTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.breadthTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.breadthTbx.ForeColor = System.Drawing.Color.White;
             this.breadthTbx.Location = new System.Drawing.Point(589, 399);
@@ -179,11 +181,12 @@
             this.breadthLbl.Name = "breadthLbl";
             this.breadthLbl.Size = new System.Drawing.Size(118, 38);
             this.breadthLbl.TabIndex = 9;
-            this.breadthLbl.Text = "Breath:";
+            this.breadthLbl.Text = "Breadth:";
             this.breadthLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // baseTbx
             // 
+            this.baseTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.baseTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.baseTbx.ForeColor = System.Drawing.Color.White;
             this.baseTbx.Location = new System.Drawing.Point(379, 399);
@@ -223,6 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.circleBtn);
             this.Controls.Add(this.baseTbx);
