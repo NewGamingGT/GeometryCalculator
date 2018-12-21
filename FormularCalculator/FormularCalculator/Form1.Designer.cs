@@ -152,10 +152,10 @@
             this.answerLbl.BackColor = System.Drawing.Color.Transparent;
             this.answerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.answerLbl.ForeColor = System.Drawing.Color.Black;
-            this.answerLbl.Location = new System.Drawing.Point(17, 201);
+            this.answerLbl.Location = new System.Drawing.Point(156, 201);
             this.answerLbl.Name = "answerLbl";
             this.answerLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.answerLbl.Size = new System.Drawing.Size(775, 40);
+            this.answerLbl.Size = new System.Drawing.Size(492, 40);
             this.answerLbl.TabIndex = 3;
             this.answerLbl.Text = "1";
             this.answerLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
