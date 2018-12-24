@@ -29,7 +29,10 @@ namespace FormularCalculator
 
         decimal lengthNum;
         decimal breadthNum;
-        decimal baseNum;
+        decimal base1Num;
+        decimal base2Num;
+        decimal heightNum;
+        decimal radiusNum;
 
         public Form1()
         {
@@ -53,26 +56,32 @@ namespace FormularCalculator
 
         //Formulas
         #region Formulas
+
+        //calculate the area of square
         decimal squareArea(decimal length)
         {
             return length * length;
         }
 
+        //calculate the area of rectangle
         decimal rectArea(decimal length, decimal breadth)
         {
             return length * breadth;
         }
 
+        //calculate the are of triangle
         decimal triArea(decimal length, decimal height)
         {
             return (length * height) / 2;
         }
 
+        //calculate the area of trapizium
         decimal trapArea(decimal base1,decimal base2,decimal height)
         {
             return ((base1 + base2) / 2) * height;
         }
 
+        //calculate the area of circle
         decimal circleArea(decimal radius)
         {
             decimal pi = 3.14159m;
@@ -88,39 +97,49 @@ namespace FormularCalculator
             Breadth = breadthTbx.Text;
             _base = baseTbx.Text;
 
+            //Convert the string to length if the string are not empty
             if (lengthTbx.Text != string.Empty)
             {
                 lengthNum = Convert.ToDecimal(Length);
-                if(breadthTbx.Text != string.Empty)
+                base2Num = lengthNum;
+                radiusNum = lengthNum;
+                if (breadthTbx.Text != string.Empty)
                 {
                     breadthNum = Convert.ToDecimal(Breadth);
+                    heightNum = breadthNum;
                     if (baseTbx.Text != string.Empty)
                     {
-                        baseNum = Convert.ToDecimal(_base);
+                        base1Num = Convert.ToDecimal(_base);
                     }
                 }
             }
             
+            //mode 0 = Area of square
             if (mode == 0)
             {
                 realAnswer = squareArea(lengthNum);
             }
+            //mode 1 = area of rectangle
             else if(mode == 1)
             {
                 realAnswer = rectArea(lengthNum, breadthNum);
             }
+            //mode 2 = area of triangle
             else if(mode == 2)
             {
-                realAnswer = triArea(lengthNum, breadthNum);
+                realAnswer = triArea(lengthNum, heightNum);
             }
-            else if(mode == 3)
+            //mode 3 = area of trapizium
+            else if (mode == 3)
             {
-                realAnswer = trapArea(lengthNum, baseNum, breadthNum);
+                realAnswer = trapArea(base2Num, base1Num, heightNum);
             }
-            else if(mode == 4)
+            //mode 4 = area of triangle
+            else if (mode == 4)
             {
-                realAnswer = circleArea(lengthNum);
+                realAnswer = circleArea(radiusNum);
             }
+            //Show answer on label
             answerLbl.Text = realAnswer.ToString();
         }
 
@@ -131,22 +150,29 @@ namespace FormularCalculator
             xPos = (formWidth / 2) - (rectWidth / 2) - 10;
             yPos = (formHeight / 2) - (rectHeight / 2) - 25;
 
+            //draw square / rectangle
             if (mode == 0 || mode == 1)
             {
                 e.Graphics.FillRectangle(myBrush, xPos, yPos, rectWidth, rectHeight);
             }
+
+            //draw triangle
             else if (mode == 2)
             {
                 Point[] a = { new Point(400, 100), new Point(525, 350), new Point(275, 350) };
                 e.Graphics.FillPolygon(myBrush, a);
                 e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             }
+
+            //draw trapizium
             else if (mode == 3)
             {
                 Point[] a = { new Point(300, 100), new Point(500, 100), new Point(600, 350), new Point(200, 350) };
                 e.Graphics.FillPolygon(myBrush, a);
                 e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             }
+
+            //draw circle
             else if (mode == 4)
             {
                 e.Graphics.FillEllipse(myBrush, xPos, yPos, rectWidth, rectHeight);
