@@ -70,6 +70,7 @@
             // 
             // calculateBtn
             // 
+            this.calculateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.calculateBtn.ForeColor = System.Drawing.Color.White;
             this.calculateBtn.Location = new System.Drawing.Point(675, 403);
