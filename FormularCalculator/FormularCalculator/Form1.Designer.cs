@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LengthLbl = new System.Windows.Forms.Label();
             this.lengthTbx = new System.Windows.Forms.TextBox();
             this.calculateBtn = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.baseTbx = new System.Windows.Forms.TextBox();
             this.baseLbl = new System.Windows.Forms.Label();
             this.circleBtn = new System.Windows.Forms.Button();
+            this.Settings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LengthLbl
@@ -49,7 +51,7 @@
             this.LengthLbl.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.LengthLbl.Font = new System.Drawing.Font("Arial", 20F);
             this.LengthLbl.ForeColor = System.Drawing.Color.White;
-            this.LengthLbl.Location = new System.Drawing.Point(42, 400);
+            this.LengthLbl.Location = new System.Drawing.Point(42, 427);
             this.LengthLbl.Name = "LengthLbl";
             this.LengthLbl.Size = new System.Drawing.Size(113, 38);
             this.LengthLbl.TabIndex = 0;
@@ -61,7 +63,7 @@
             this.lengthTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.lengthTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lengthTbx.ForeColor = System.Drawing.Color.White;
-            this.lengthTbx.Location = new System.Drawing.Point(156, 399);
+            this.lengthTbx.Location = new System.Drawing.Point(156, 426);
             this.lengthTbx.Name = "lengthTbx";
             this.lengthTbx.Size = new System.Drawing.Size(80, 38);
             this.lengthTbx.TabIndex = 1;
@@ -73,7 +75,7 @@
             this.calculateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.calculateBtn.ForeColor = System.Drawing.Color.White;
-            this.calculateBtn.Location = new System.Drawing.Point(675, 403);
+            this.calculateBtn.Location = new System.Drawing.Point(675, 430);
             this.calculateBtn.Name = "calculateBtn";
             this.calculateBtn.Size = new System.Drawing.Size(113, 35);
             this.calculateBtn.TabIndex = 2;
@@ -87,7 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formulaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.formulaLbl.ForeColor = System.Drawing.Color.White;
-            this.formulaLbl.Location = new System.Drawing.Point(43, 31);
+            this.formulaLbl.Location = new System.Drawing.Point(43, 58);
             this.formulaLbl.Name = "formulaLbl";
             this.formulaLbl.Size = new System.Drawing.Size(749, 39);
             this.formulaLbl.TabIndex = 4;
@@ -99,7 +101,7 @@
             this.squareBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.squareBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.squareBtn.ForeColor = System.Drawing.Color.White;
-            this.squareBtn.Location = new System.Drawing.Point(12, 35);
+            this.squareBtn.Location = new System.Drawing.Point(12, 81);
             this.squareBtn.Name = "squareBtn";
             this.squareBtn.Size = new System.Drawing.Size(113, 35);
             this.squareBtn.TabIndex = 5;
@@ -112,7 +114,7 @@
             this.rectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.rectBtn.ForeColor = System.Drawing.Color.White;
-            this.rectBtn.Location = new System.Drawing.Point(12, 76);
+            this.rectBtn.Location = new System.Drawing.Point(12, 122);
             this.rectBtn.Name = "rectBtn";
             this.rectBtn.Size = new System.Drawing.Size(113, 35);
             this.rectBtn.TabIndex = 6;
@@ -125,7 +127,7 @@
             this.trapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.trapBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.trapBtn.ForeColor = System.Drawing.Color.White;
-            this.trapBtn.Location = new System.Drawing.Point(12, 158);
+            this.trapBtn.Location = new System.Drawing.Point(12, 204);
             this.trapBtn.Name = "trapBtn";
             this.trapBtn.Size = new System.Drawing.Size(113, 35);
             this.trapBtn.TabIndex = 8;
@@ -138,7 +140,7 @@
             this.triBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.triBtn.ForeColor = System.Drawing.Color.White;
-            this.triBtn.Location = new System.Drawing.Point(12, 117);
+            this.triBtn.Location = new System.Drawing.Point(12, 163);
             this.triBtn.Name = "triBtn";
             this.triBtn.Size = new System.Drawing.Size(113, 35);
             this.triBtn.TabIndex = 7;
@@ -153,7 +155,7 @@
             this.answerLbl.BackColor = System.Drawing.Color.Transparent;
             this.answerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.answerLbl.ForeColor = System.Drawing.Color.Black;
-            this.answerLbl.Location = new System.Drawing.Point(156, 201);
+            this.answerLbl.Location = new System.Drawing.Point(155, 248);
             this.answerLbl.Name = "answerLbl";
             this.answerLbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.answerLbl.Size = new System.Drawing.Size(492, 40);
@@ -166,7 +168,7 @@
             this.breadthTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.breadthTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.breadthTbx.ForeColor = System.Drawing.Color.White;
-            this.breadthTbx.Location = new System.Drawing.Point(589, 399);
+            this.breadthTbx.Location = new System.Drawing.Point(589, 426);
             this.breadthTbx.Name = "breadthTbx";
             this.breadthTbx.Size = new System.Drawing.Size(80, 38);
             this.breadthTbx.TabIndex = 10;
@@ -178,7 +180,7 @@
             this.breadthLbl.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.breadthLbl.Font = new System.Drawing.Font("Arial", 20F);
             this.breadthLbl.ForeColor = System.Drawing.Color.White;
-            this.breadthLbl.Location = new System.Drawing.Point(465, 399);
+            this.breadthLbl.Location = new System.Drawing.Point(465, 426);
             this.breadthLbl.Name = "breadthLbl";
             this.breadthLbl.Size = new System.Drawing.Size(118, 38);
             this.breadthLbl.TabIndex = 9;
@@ -190,7 +192,7 @@
             this.baseTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
             this.baseTbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.baseTbx.ForeColor = System.Drawing.Color.White;
-            this.baseTbx.Location = new System.Drawing.Point(379, 399);
+            this.baseTbx.Location = new System.Drawing.Point(379, 426);
             this.baseTbx.Name = "baseTbx";
             this.baseTbx.Size = new System.Drawing.Size(80, 38);
             this.baseTbx.TabIndex = 12;
@@ -202,7 +204,7 @@
             this.baseLbl.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.baseLbl.Font = new System.Drawing.Font("Arial", 20F);
             this.baseLbl.ForeColor = System.Drawing.Color.White;
-            this.baseLbl.Location = new System.Drawing.Point(255, 399);
+            this.baseLbl.Location = new System.Drawing.Point(255, 426);
             this.baseLbl.Name = "baseLbl";
             this.baseLbl.Size = new System.Drawing.Size(118, 38);
             this.baseLbl.TabIndex = 11;
@@ -215,7 +217,7 @@
             this.circleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.circleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.circleBtn.ForeColor = System.Drawing.Color.White;
-            this.circleBtn.Location = new System.Drawing.Point(12, 199);
+            this.circleBtn.Location = new System.Drawing.Point(12, 245);
             this.circleBtn.Name = "circleBtn";
             this.circleBtn.Size = new System.Drawing.Size(113, 35);
             this.circleBtn.TabIndex = 13;
@@ -223,12 +225,25 @@
             this.circleBtn.UseVisualStyleBackColor = true;
             this.circleBtn.Click += new System.EventHandler(this.circleBtn_Click);
             // 
+            // Settings
+            // 
+            this.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Settings.ForeColor = System.Drawing.Color.White;
+            this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
+            this.Settings.Location = new System.Drawing.Point(12, 33);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(40, 40);
+            this.Settings.TabIndex = 14;
+            this.Settings.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(804, 461);
+            this.ClientSize = new System.Drawing.Size(804, 500);
+            this.Controls.Add(this.Settings);
             this.Controls.Add(this.circleBtn);
             this.Controls.Add(this.baseTbx);
             this.Controls.Add(this.baseLbl);
@@ -244,7 +259,8 @@
             this.Controls.Add(this.lengthTbx);
             this.Controls.Add(this.LengthLbl);
             this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(820, 500);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(820, 550);
             this.MinimumSize = new System.Drawing.Size(820, 500);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -272,6 +288,7 @@
         private System.Windows.Forms.TextBox baseTbx;
         private System.Windows.Forms.Label baseLbl;
         private System.Windows.Forms.Button circleBtn;
+        private System.Windows.Forms.Button Settings;
     }
 }
 

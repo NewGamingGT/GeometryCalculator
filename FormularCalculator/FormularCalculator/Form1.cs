@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace FormularCalculator
 {
+    //Add settings
+    //change the color of the drawing && text using settings
+
     public partial class Form1 : Form
     {
         int rectWidth;
@@ -139,8 +142,8 @@ namespace FormularCalculator
             {
                 realAnswer = circleArea(radiusNum);
             }
-            //Show answer on label
-            answerLbl.Text = realAnswer.ToString();
+            //Show answer on label && remove trailing zeros
+            answerLbl.Text = realAnswer.ToString("0.############################");
         }
 
         SolidBrush myBrush = new SolidBrush(Color.White);
@@ -148,7 +151,7 @@ namespace FormularCalculator
         void Form1_Paint(object sender, PaintEventArgs e)
         {
             xPos = (formWidth / 2) - (rectWidth / 2) - 10;
-            yPos = (formHeight / 2) - (rectHeight / 2) - 25;
+            yPos = (formHeight / 2) - (rectHeight / 2) + 5;
 
             //draw square / rectangle
             if (mode == 0 || mode == 1)
@@ -159,7 +162,7 @@ namespace FormularCalculator
             //draw triangle
             else if (mode == 2)
             {
-                Point[] a = { new Point(400, 100), new Point(525, 350), new Point(275, 350) };
+                Point[] a = { new Point(400, 120), new Point(525, 370), new Point(275, 370) };
                 e.Graphics.FillPolygon(myBrush, a);
                 e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             }
@@ -167,7 +170,7 @@ namespace FormularCalculator
             //draw trapizium
             else if (mode == 3)
             {
-                Point[] a = { new Point(300, 100), new Point(500, 100), new Point(600, 350), new Point(200, 350) };
+                Point[] a = { new Point(300, 120), new Point(500, 120), new Point(600, 370), new Point(200, 370) };
                 e.Graphics.FillPolygon(myBrush, a);
                 e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             }
@@ -184,6 +187,7 @@ namespace FormularCalculator
         {
             Visibility(false, false, false, false);
 
+            //auto align textbox to equally spreadout
             LengthLbl.Left = (formWidth / 2) - 115;
             lengthTbx.Left = LengthLbl.Left + 110;
 
@@ -196,6 +200,7 @@ namespace FormularCalculator
 
             formulaLbl.Text = "Formular for area of square =  Length * Length";
 
+            //set width of rectangle
             rectWidth = 250;
             rectHeight = 250;
             Invalidate();
@@ -205,6 +210,7 @@ namespace FormularCalculator
         {
             Visibility(true, true, false, false);
 
+            //auto align textbox to equally spreadout
             LengthLbl.Left = (formWidth / 2) - 220;
             lengthTbx.Left = LengthLbl.Left + 110;
 
@@ -229,6 +235,7 @@ namespace FormularCalculator
         {
             Visibility(true, true, false, false);
 
+            //auto align textbox to equally spreadout
             LengthLbl.Left = (formWidth / 2) - 210;
             lengthTbx.Left = LengthLbl.Left + 110;
 
@@ -251,6 +258,7 @@ namespace FormularCalculator
         {
             Visibility(true, true, true, true);
 
+            //auto align textbox to equally spreadout
             LengthLbl.Left = (formWidth / 2) - 330;
             lengthTbx.Left = LengthLbl.Left + 110;
 
@@ -277,6 +285,7 @@ namespace FormularCalculator
         {
             Visibility(false, false, false, false);
 
+            //auto align textbox to equally spreadout
             LengthLbl.Left = (formWidth / 2) - 115;
             lengthTbx.Left = LengthLbl.Left + 110;
 
@@ -309,7 +318,6 @@ namespace FormularCalculator
             baseLbl.Visible = basLbl;
             baseTbx.Visible = basTbx;
         }
-
 
         //Only allow numbers and . in textbox
         #region Textbox
@@ -345,5 +353,42 @@ namespace FormularCalculator
             }
         }
         #endregion
+
+        //Move form using panel
+        #region MoveForm
+        public Point mouseLocation;
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                Point mousePose = MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+        #endregion
+
+        /*
+        //Exit the application
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        //Minimize the application
+        private void miniBtn_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+        */
     }
 }
