@@ -259,7 +259,7 @@
             this.Controls.Add(this.lengthTbx);
             this.Controls.Add(this.LengthLbl);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(820, 550);
             this.MinimumSize = new System.Drawing.Size(820, 500);
             this.Name = "Form1";
